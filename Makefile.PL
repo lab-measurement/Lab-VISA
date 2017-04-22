@@ -52,6 +52,6 @@ WriteMakefile(
         },
     },
     'ABSTRACT_FROM'     => 'VISA.pod',
-    'AUTHOR'            => ['Daniel Schröer <schroeer@cpan.org>', 'Andreas K. Hüttel <mail@akhuettel.de>'],
+    'AUTHOR'            => ['Daniel Schroeer <schroeer@cpan.org>', 'Andreas K. Huettel <mail@akhuettel.de>'],
 
 );
