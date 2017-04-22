@@ -45,9 +45,10 @@ WriteMakefile(
     },
     'META_MERGE'        => {
         resources => {
-            homepage    =>      'https://www.labmeasurement.de/',
-            bugtracker  =>      'https://github.com/lab-measurement/lab-measurement/issues',
+            homepage    =>      'https://github.com/lab-measurement/Lab-VISA',
+            bugtracker  =>      'https://github.com/lab-measurement/Lab-VISA/issues',
             MailingList =>      'lab-measurement-users@mailman.uni-regensburg.de',
+            repository  =>      'https://github.com/lab-measurement/Lab-VISA.git',
         },
     },
     'ABSTRACT_FROM'     => 'VISA.pod',
