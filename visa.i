@@ -61,7 +61,7 @@ extern ViStatus _VI_FUNC viOpenDefaultRM(ViSession *OUTPUT);
 extern ViStatus _VI_FUNC viOpen(ViSession sesn, ViRsrc name, ViAccessMode mode, ViUInt32 timeout, ViSession *OUTPUT);
 
 extern ViStatus _VI_FUNC viSetAttribute(ViObject vi, ViAttr attrName, ViAttrState attrValue);
-extern ViStatus _VI_FUNC viGetAttribute(ViObject vi, ViAttr attrName, void *OUTPUT);
+extern ViStatus _VI_FUNC viGetAttribute(ViObject vi, ViAttr attrName, ViAttrState *OUTPUT);
 
 extern ViStatus _VI_FUNC viReadSTB (ViSession vi, ViPUInt16 OUTPUT);
 

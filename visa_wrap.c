@@ -2078,18 +2078,20 @@ XS(_wrap_viGetAttribute) {
   {
     ViObject arg1 ;
     ViAttr arg2 ;
-    void *arg3 = (void *) 0 ;
+    ViAttrState *arg3 = (ViAttrState *) 0 ;
     unsigned long val1 ;
     int ecode1 = 0 ;
     unsigned long val2 ;
     int ecode2 = 0 ;
-    int res3 ;
+    ViAttrState temp3 ;
+    int res3 = SWIG_TMPOBJ ;
     int argvi = 0;
     ViStatus result;
     dXSARGS;
     
-    if ((items < 3) || (items > 3)) {
-      SWIG_croak("Usage: viGetAttribute(vi,attrName,OUTPUT);");
+    arg3 = &temp3;
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: viGetAttribute(vi,attrName);");
     }
     ecode1 = SWIG_AsVal_unsigned_SS_long SWIG_PERL_CALL_ARGS_2(ST(0), &val1);
     if (!SWIG_IsOK(ecode1)) {
@@ -2101,12 +2103,14 @@ XS(_wrap_viGetAttribute) {
       SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "viGetAttribute" "', argument " "2"" of type '" "ViAttr""'");
     } 
     arg2 = (ViAttr)(val2);
-    res3 = SWIG_ConvertPtr(ST(2),SWIG_as_voidptrptr(&arg3), 0, 0);
-    if (!SWIG_IsOK(res3)) {
-      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "viGetAttribute" "', argument " "3"" of type '" "void *""'"); 
-    }
     result = (ViStatus)viGetAttribute(arg1,arg2,arg3);
     ST(argvi) = SWIG_From_long  SWIG_PERL_CALL_ARGS_1((long)(result)); argvi++ ;
+    if (SWIG_IsTmpObj(res3)) {
+      if (argvi >= items) EXTEND(sp, argvi+1);  ST(argvi) = SWIG_From_unsigned_SS_long  SWIG_PERL_CALL_ARGS_1((*arg3)); argvi++  ;
+    } else {
+      int new_flags = SWIG_IsNewObj(res3) ? (SWIG_POINTER_OWN | 0) : 0;
+      if (argvi >= items) EXTEND(sp, argvi+1);  ST(argvi) = SWIG_NewPointerObj((void*)(arg3), SWIGTYPE_p_unsigned_long, new_flags); argvi++  ;
+    }
     
     
     
